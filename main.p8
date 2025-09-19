@@ -3,6 +3,20 @@ version 43
 __lua__
 function _init()
 	print("hello world")
+	position = 60
+end
+
+function _update()
+	if (btn(⬅️)) then
+		position -= 1
+	elseif (btn(➡️)) then
+		position += 1
+	end
+end
+
+function _draw()
+	cls()
+	spr(1, position, 60)
 end
 __gfx__
 00000000333333331111111100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
